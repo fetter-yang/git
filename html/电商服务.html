@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新媒体服务</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/mousePress.js"></script>
+    <script >
+        window.onload = function(){
+            mousePress();
+        }
+    </script>
+    <style>
+
+      
+        #header .container_fluid h1 {
+           position: relative;
+           top: 225px;
+        }
+        #header .container_fluid h3 {
+            margin-top: 257px;
+            color: white;
+        }
+        #header .container_fluid p {color: #999999;margin-top: 16px;}
+        #header #mask ul .li2{background: orangered;}
+        #header #mask:hover .li2{background: transparent;}
+        #section {text-align: center;margin-top: 120px;height: 890px;width: 1208px;}
+        #section p {margin-top:13px ;color: #999999;}
+        .ul1 { display: grid;grid-template-columns: .5fr 1fr 3fr;margin-top: 53px;}
+        #section ul li div {background: url(../img2/img5.png) no-repeat;width: 62px;height: 96px;text-align: left;}
+        #section .text-left {text-align: left;}
+        #section ul li div p {position: relative; top: 30px;color: #FFFFFF;font-size: 32px;border-bottom: 2px solid white; width: 32px;margin-left: 14px;}
+        #section ul div h1 {font-size: 32px;color: #333333;width: 217px;margin-top: 25px;}
+        #section ul div p {color: #333333;margin-top: 10px;width: 317px;}
+        #section ul li img {position: relative;}
+        #section .ul1 li img:first-child {top: -188px;left: 153px;}
+        #section .ul1 li img:nth-child(3) {top: -70px;left: -28px;}
+        #section .ul1 li img:nth-child(4) {top: -110px;left: 15px;}
+       
+        #section .ul2 li img:nth-child(2) {top: 90px;left:-168px;}
+        #section .ul2 li img:nth-child(3) {top: -143px;left:-262px;}
+        #section .ul2 li:last-child {margin-left: -120px;margin-top: 60px;}
+        #section .ul2 h1 {width: 337px;font-size: 30px;color: #333333;}
+        #section .ul2 .p2 {color: #333333;width: 317px;}
+        #section .ul2 section {text-align: left;position: relative;left: 90px;top: -75px;}
+        #none {margin: auto;background-color: #F4F5F7;height: 300px;}
+        #none div img {margin-top: 43px;}
+        #none div ul {position: relative;top: 92px;}
+        #none div ul li {position: relative;}
+        #none ul li::before {content: "";display: block;position: absolute;border: 1px solid orangered;transform: rotate(-45deg);width: 4px;height: 4px;background: orangered;top:8px;right: 520px;}
+
+        /* 主要内容 */
+        #main {margin-top: 86px;text-align: center;}
+        #main h2 {font-size: 30px;color: #333333;}
+        #main p {color: #999999;margin-top: 12px;}
+
+        .yuying {width: 1208px;display: flex;justify-content: space-evenly;margin-top:54px;}
+        .yuying li {width: 150px;height: 150px;border: 1px solid  #F4F5F7;align-self:center;background:#F4F5F7;border-radius:50% ;}
+        .yuying2 {margin-top: 24px;} 
+        .yuying h3 {width: 150px;}
+        .yuying3 {margin-top: 32px;} 
+        .yuying4 {margin-top: 24px;} 
+
+        #main .service {margin-top:268px ;width: 100%;background: url(../images/12.png) no-repeat center ;min-height: 822px;}
+        .main-service {display:flex;justify-content:space-evenly;width:1208px;margin: auto;align-content: center;margin-top: 120px;}
+        .main-service  li {width: 224px;height: 244px; border: 1px solid whitesmoke;box-shadow:0 0 5px gainsboro;}
+        .main-service  li div {margin-top:46.9px;}
+        .main-service  li h3 {font-size: 18px;margin-top: 11px;}
+        .main-service  li p {width: 162px;margin: auto;margin-top: 15px;}
+        .main-service2 {margin-top: 20px;}
+
+        .plan {text-align: center;margin-top: 80px;}
+        .plan p {margin-top: 17px;}
+        .plan .plan-5 {width: 1208px;display: flex;justify-content: space-between;margin: auto;margin-top: 52px;}
+        .plan .plan-5 li {width: 224px;text-align: center;font-size: 18px;color: #333333;}
+        .plan .plan-btm {margin-top: 22px;}
+
+        .num-container-fluid {background-color: #ffffff;width: 100%;margin-top: 101px;}
+        .num {width: 1208px;height: 230px;display: flex;justify-content: space-between;margin: auto;}
+        .num li {color: #FF6A00;position: relative;font-size: 54px;margin-top: 88px;text-align: left;height: 86px;}
+        .num li:first-of-type{margin-left: 10px;}
+        .num li::after {content: "+"; display: block;color: #333333;position: absolute;width: 10px;height: 10px;font-size: 14px;right: -10px;top: 2px;}
+        .num  span {display: inline-block;border-right:1px #dddddd solid;height: 86px;position: relative;top: 84px;}
+        .num-text {width: 1208px;display: flex;justify-content: space-around; margin-top: -80px;} 
+        #main  .num-text p {color: #333333;}
+        .num-text p {position: relative;left: -120px;}
+        .num-text .p2{left: -65px;}
+        .num-text .p3{left: 25px;}
+        .num-text .p4{left: 108px;}
+        .store {text-align: center;margin-top: 87px;}
+        .store p {margin-top: 17px;}
+
+        .sotre-img {display: flex;justify-content: center;}
+        .sotre-img .pic {height: 675px;}
+        .store-text {margin-top: 132px;margin-left: 25px;}
+        #store-content .graph {float: left;margin-right: 20px;position: relative;top: -10px;}
+        #store-content div p {width: 460px;display: inline-block;}
+        #store-content div h3 {position: relative;left: -192px;color: #333333;}
+
+        #strategy {width: 100%;height: 760px;background: #F4F5F7;margin-top: -45px;}
+        #strategy .title {position: relative;top: 88px;}
+        #strategy .title p {width: 671px;margin:0 auto;margin-top: 16px;}
+        #strategy .flex-container {width: 1208px;margin: auto; display: flex;justify-content: space-between;margin-top: 224px;}
+        #strategy .flex-container li {width: 277px;height: 368px;text-align: center;background: url(./img2/strategy1.png);}
+        #strategy .flex-container li:nth-of-type(2) {background-image: url(../img2/strategy2.png);}
+        #strategy .flex-container li:nth-of-type(3) {background-image: url(../img2/strategy3.png);}
+        #strategy .flex-container li:nth-of-type(4) {background-image: url(../img2/strategy4.png);}
+        #strategy .flex-container li p {color: white;font-size: 48px;margin-top:60px ;}
+        iframe {margin-top: -50px;}
+    </style>
+</head>
+<body>
+
+
+
+   
+    <div id="header" class="container_fluid" style="background-image: url(./img2/dev-bg.png);">
+        <div id="mask">  
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                </div>
+                <ul class="header_nav">
+                    <li class="li li1"><a href="./新媒体.html">首页</a></li>
+                    <li class="li li2"><a href="./电商服务.html">电商策划</a><span></span></li>
+                    <li class="li li3"><a href="./新媒体.html">新媒体</a><span></span></li>
+                    
+                    <li class="li"><a href="./视觉设计.html">视觉设计</a><span></span></li>
+                    <li class="li"><a href="软件设计.html">软件开发</a><span></span></li>
+                    <li class="li"><a href="./关于我们.html">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="head-img" class="container_fluid">
+            <h1>电商的问题我们“对症下药”</h1>
+            <h3>电子商务解决方案</h3>
+            <p class="p">The Internet is a problem for us</p>
+        </div>
+    </div>
+    <div id="section" class="container">
+        <div>
+            <h2>服务优势</h2>
+            <p>Service advantages</p>
+        </div>
+       <ul class="ul1">
+           <li>
+               <div>
+                   <p>01</p>
+               </div>
+              
+           </li>
+           <div class="text-left">
+                <h1>“运营”=“运赢”</h1>
+                <p>打造合作共赢一体化模式打破“盲目托管”，定制符合中小企业特性的合作托管模式，为企业培养核心团队 手把手带企业“运赢”
+                </p>
+           </div>
+           <li>
+                <img src="../img2/img3.png" alt="">
+                <img src="../img2/img2.png" alt="">
+                <img src="../img2/img1.png" alt="">
+                <img src="../img2/img4.png" alt="">
+           </li>
+       </ul>
+       <ul class="ul2 clear">
+
+
+        <li class="l">
+            <img src="../img2/img10.png" alt="">
+            <img src="../img2/img13.png" alt="">
+            <img src="../img2/img12.png" alt="">
+
+        </li>
+        <li class="l">
+            <div>
+                <p>02</p>
+            </div>
+                <section>
+                    <h1>授之以鱼，不如授之以渔</h1>
+                    <p class="p2">
+                        度剥析中小型企业特点，打造“合作共赢＋核心培养一
+        体化”运营新模式
+                    </p>
+                </section>
+        </li>
+    </ul>
+
+    </div>
+    <div id="none" class="container_fluid ">
+        <div class="container clear">
+            <img src="../img2/img11.png" alt="#" class="l">
+            
+            <ul> 
+                <h3>中小型企业传统运营通点</h3>                            
+                <li>1.性价比投入和利益转化不可兼得？</li>
+                <li>2. 没有自己的核心运营团队，掌控力全无？</li>
+                <li>3.合作紧密度差，无归宿感？</li>
+            </ul>
+        </div>
+       
+
+    </div>
+    <div id="main" class="container-fluid">
+        <h2>星级服务&nbsp;专注于中小企业电商代运营</h2>
+        <p>best service</p>
+        <ul class="yuying container">
+            <li><img src="../img2/tm.png" alt=""></li>
+            <li><img src="../img2/tb.png" alt=""></li>
+            <li><img src="../img2/pdd.png" alt=""></li>
+            <li><img src="../img2/jd.png" alt=""></li>
+        </ul>
+        <div class="yuying yuying2 container">
+            <h3>天猫</h3>
+            <h3>淘宝</h3>
+            <h3>拼多多</h3>
+            <h3>京东</h3>
+        </div>
+
+        <ul class="yuying yuying3 container">
+            <li><img src="../img2/sn1.png" alt=""></li>
+            <li><img src="../img2/sn2.png" alt=""></li>
+            <li><img src="../img2/jx.png" alt=""></li>
+            <li><img src="../img2/youzai.png" alt=""></li>
+        </ul>
+        <div class="yuying yuying4 container">
+            <h3>苏宁易购</h3>
+            <h3>苏宁拼购</h3>
+            <h3>京喜</h3>
+            <h3>有赞商城</h3>
+        </div>
+        <div class="service container_fluid">
+            <div class="service-container">
+                <h2>服务项目</h2>
+                <p>Service Items</p>
+            </div>
+
+            <ul class="main-service">
+                <li>
+                    <div><img src="../img2/fw1.png" alt=""></div>
+                    <h3>平台入驻</h3>
+                    <p>基于对入驻规则的了解，使申请店铺快速入驻通过</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw2.png" alt=""></div>
+                    <h3>营销策划</h3>
+                    <p>从电商平台的搭建到品牌营销策略，一路为您保驾护航</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw3.png" alt=""></div>
+                    <h3>视觉设计</h3>
+                    <p>整店装修、活动专题页设计、详情页设计,打造属于您品牌的专属页面风格</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw4.png" alt=""></div>
+                    <h3>运营推广</h3>
+                    <p>结合市场和竞品情况，为店铺打造只属于自己的营销和推广</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw5.png" alt=""></div>
+                    <h3>数据分析</h3>
+                    <p>行业/竞品/消费群体精确分析</p>
+                </li>
+            </ul>
+            <ul class="main-service main-service2">
+                <li>
+                    <div><img src="../img2/fw6.png" alt=""></div>
+                    <h3>图片和视频拍摄</h3>
+                    <p>延伸店铺品牌形象，提高转化率</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw7.png" alt=""></div>
+                    <h3>客服外包</h3>
+                    <p>定制专业客服团队，满足个性需求</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw8.png" alt=""></div>
+                    <h3>整店托管服务</h3>
+                    <p>敬畏客户的每一分投入　为客户创造价值,打造属于您品牌的专属页面风格</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw9.png" alt=""></div>
+                    <h3>店铺诊断</h3>
+                    <p>分析店铺优劣势，分析店铺产品结构</p>
+                </li>
+                <li>
+                    <div><img src="../img2/fw10.png" alt=""></div>
+                    <h3>电商培训</h3>
+                    <p>传统企业如何快速启动电商营销</p>
+                </li>
+            </ul>
+        </div>
+        <div class="plan">
+            <h2>新电商扶持计划</h2>
+            <p>New e-commerce support plan</p>
+            <ul class="plan plan-5">
+                <li><img src="../img2/plan (1).png" alt=""></li>
+                <li><img src="../img2/plan (2).png" alt=""></li>
+                <li><img src="../img2/plan (3).png" alt=""></li>
+                <li><img src="../img2/plan (4).png" alt=""></li>
+                <li><img src="../img2/plan (5).png" alt=""></li>
+            </ul>
+            <ul class="plan-5 plan-btm"> 
+                <li>协同上下游供应商</li>
+                <li>整合供应链</li>
+                <li>高效运营</li>
+                <li>无缝对接</li>
+                <li>降低成本</li>
+            </ul>
+        </div>
+        <div class="num-container-fluid">
+            <ul class="num">
+                <li >4 </li><span></span>
+                <li >10000</li><span></span>
+                <li >500</li><span></span>
+                <li >100</li>
+    
+            </ul>
+        </div>
+        <div class="num-text container">
+            <p >4年行业佼佼者</p>
+            <p class="p2">10000+客户案例</p>
+            <p class="p3">500+品牌合作</p>
+            <p class="p4">100+实战课程</p>
+        </div>
+        <div class="store container_fluid">
+            <h2>商城</h2>
+            <p>Shopping Mall</p>
+            <ul class="clear sotre-img">
+                <li class="l">
+                    <img src="../img2/mall.png" alt="" class="pic">
+                </li>
+                <li id="store-content" class="l store-text">
+                    <div class="clear" >
+                        <div class="graph"><img src="../img2/mall1.png" alt=""></div>
+                        <div class="l">
+                            <h3>首页编辑</h3>
+                            <p>首页编辑手机端首页、专题页面中的内容模块可以通过web端商城管理平台进行设计编辑,可以自定义添加广告、图片、商品等多种类型,即见即所得,随时更新内容
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="graph"><img src="../img2/mall2.png" alt=""></div>
+                        <div class="l">
+                            <h3>分类商品</h3>
+                            <p>接口读取商城分类,并可自行添加分类图标。商品列表下拉载入内容,适合移动客户操作习惯。商品详情载入手机端专用优化内容编辑,提高载入效率节首用户流量</p>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="graph"><img src="../img2/mall3.png" alt=""></div>
+                        <div class="l">
+                            <h3>移动支付</h3>
+                            <p>利用手机直接支付订单简单又方便,当用户需要支付移动商城购物车中的商品时,只需简单操作即可完成。平台可设置添加支付宝、微信支付等目前国内流行的移动支付接口</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="graph"><img src="../img2/mall4.png" alt=""></div>
+                        <div class="l">
+                            <h3>物流跟踪</h3>
+                            <p>物流跟踪商家已发货的订单可通过物流跟踪信息,随时查看运输情况,篱一时间获知已购商品何时送达自己手中,提高购物体验度,让购物者买的省心,等的放心</p>
+                        </div>
+                    </div class="clear">
+
+                </li>
+            </ul>
+        </div>
+        <div id="strategy" class="container__fluid">
+            <div class="title">
+                <h2>以销量为导向的运营策略</h2>
+                <p>
+                    移动互联网已成为主流,新时代的新电商,所有的策略都应该把手机作为主阵地,围绕移动生活场景开展一系列的运营推广工作
+                </p>
+            </div>
+            <ul class="flex-container">
+                <li><p>爆款打造</p></li>
+                <li><p>活动引爆</p></li>
+                <li><p>精准营销</p></li>
+                <li><p>数据驱动</p></li>
+            </ul>
+
+        </div>
+        <iframe src="./footer.html" frameborder="0" width="100%" height="272px" scrolling="no"></iframe>
+    </div>
+</body>
+</html>

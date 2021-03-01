@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-">
+    <title>新媒体服务</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/mousePress.js"></script>
+    <script >
+        window.onload = function(){
+            mousePress();
+        }
+    </script>
+    <style>
+        h2 {font-size: 30px;color: #333333;height: 30px;line-height: 30px;}
+        h3 {font-size: 18px;color: #333333;height: 36px;line-height: 36px;}
+        p {font-size: 14px;height: 28px;line-height: 28px;color: #999999;}
+        #header .container_fluid div {position: relative;top: 200px;}
+        #header .container_fluid .p {top: 180px;}
+        #header #mask  ul .li5 {background-color:orangered;}
+        #header #mask:hover .li5{background: transparent;}
+        #intro {width: 1220px; margin: auto; text-align: center;}
+        #intro h2 {margin-top: 101px; }
+        #intro p {margin-top: 16px; }
+        #intro .intro-flex-container {width: 1220px; display: flex;justify-content: space-around;margin-top: 52px;text-align: center;box-sizing: border-box;}
+        #intro .intro-flex-container li {width: 330px;height: 285px;transition: all 1s;border :1px solid  transparent;}
+/* 4个图标 默认第2个为选中的图标 */
+
+        #intro .intro-flex-container .intro-icon {height: 99px;height:99px;background:url(./img2/icon1.png) no-repeat 50% 50%;}
+        #intro .intro-flex-container .li2 .intro-icon {background-image: url(nav.html);}
+        #intro .intro-flex-container .li3 .intro-icon {background-image: url(../img2/icon3.png);}
+        #intro .intro-flex-container .li4 .intro-icon {background-image: url(../img2/icon4.png);}
+        #intro .intro-flex-container  .intro-text { width: 331px;height: 186px;}
+        #intro .intro-flex-container  .intro-text div {width: 218px;margin: auto;}
+         /*设置默认第二个为选中状态 */
+
+        #intro .intro-flex-container .li2 {border: 1px solid #FF6A00;}
+        #intro .intro-flex-container .li2 .intro-text {background-color: #FF6A00;}
+        #intro .intro-flex-container .li2 .intro-text h3 {color: white;}
+        #intro .intro-flex-container .li2 .intro-text p {color: white;}
+        #intro .intro-flex-container:hover .li2 {border: 1px solid transparent;}
+        #intro .intro-flex-container:hover .li2 .intro-icon{background-image: url(../img2/icon2.png);}
+        #intro .intro-flex-container:hover .li2 .intro-text{background-color: transparent;} 
+        #intro .intro-flex-container:hover .li2 .intro-text h3 {color: #333333;} 
+        #intro .intro-flex-container:hover .li2 .intro-text p {color: #999999;}         
+
+/*换背景边框 */
+
+        #intro .intro-flex-container .li:hover { border :1px solid  #FF6A00;}
+        #intro .intro-flex-container .li:hover .intro-text{background-color: #FF6A00;}
+        #intro .intro-flex-container .li:hover .intro-text h3 { color: white;}
+        #intro .intro-flex-container .li:hover .intro-text p { color: white;}
+/* 换图标 */
+
+        #intro .intro-flex-container .li1:hover .intro-icon {background-image: url(../img2/icon1_1.png);}
+        #intro .intro-flex-container .li2:hover .intro-icon {background-image: url(../img2/icon2_2.png);}
+        #intro .intro-flex-container .li3:hover .intro-icon{background-image: url(../img2/icon3_3.png);}
+        #intro .intro-flex-container .li4:hover .intro-icon {background-image: url(../img2/icon4_4.png);}
+
+        #dev1 {background-color:#F4F5F7;margin-top: 75px;min-height:554px ;}
+        #dev1 .container {text-align: center;width: 1200px;}
+        #dev1 .container h2 {padding-top: 80px;}
+        #dev1 .container p {margin-top: 16px;}
+        #dev1 .dev1-flex-container {width: 1220px;display: flex;justify-content: space-around;text-align: center;}
+        #dev1 .dev1-flex-container .logo {margin-top:52px ;}
+        #dev1 .dev1-flex-container .btm{width: 190px;margin-top: 6px;}
+        
+        #dev2 {margin-top: 75px;min-height:554px ;}
+        #dev2 .container {text-align: center;width: 1200px;}
+        #dev2 .container h3 {padding-top: 15px;}
+        #dev2 .container p {margin-top: 16px;}
+        #dev2 .dev1-flex-container {width: 1220px;display: flex;justify-content: space-around;text-align: center;}
+        #dev2 .dev1-flex-container li {width: 240px;height: 336px;; box-shadow: 0 0 15px violet;margin-top: 52px;border: 1px solid whitesmoke;}
+        #dev2 .dev1-flex-container .logo {margin-top:52px ;}
+        #dev2 .dev1-flex-container .btm{width: 190px;margin: auto;margin-top: 6px;border-top: 1px solid #666}
+
+        #service {width: 1220px;margin: auto;text-align:center;}
+        #service p {margin-top: 16px;}
+        #service-content {width: 1220px;display: flex;justify-content: space-evenly;margin: auto;text-align: center;}
+        #service-content p {width: 190px;font-size: 14px;margin-top: 24px;}
+
+        #service-content div {background:url(../img2/cir.png) no-repeat;width: 190px;height: 82px;margin-top: 53px;}
+        #service-content div div {width: 32px;height: 32px;border: 1px solid #3C3C3C;border-radius:50%; color: #FFFFFF;font-size: 14px;background:  #3C3C3C;position: relative;top: 25px;line-height: 32px;left: 25px;}
+        #service-content div h3 {font-size: 16px;position: relative;top: -10px;left: 10px;}
+        #last {background: url(../img2/12.png) no-repeat;background-size: 100% 100%;min-height:822px;}
+        #our {width: 1440px;text-align: center;margin-top: 128px;}
+        #our p {margin-top: 9px;}
+        #our-description {width: 987px;margin: auto;}
+        #our-description li:first-of-type {width: 400px;height: 200px;margin-top: 53px;}
+        #our-description li:last-of-type {width: 557px;margin:73px 0 0 30px;line-height: 36px;color: #333333;font-size:18px ;}
+        #feature {width: 987px;margin: auto;margin-top:52px;text-align: center;}
+        #feature h2 {font-size: 22px;position: relative;left:32px;}
+        #feature p {font-size: 14px;margin-top: 8px;margin-left: 80px;}
+        #last-outlook {width: 987px;display: grid;grid-template-columns:repeat(4,1fr);margin: auto;margin-top: 36px;text-align: center;}
+        #last-outlook div {width: 170px;height: 119px;border: 1px solid #DDDDDD; margin: auto;margin-top: 10px;}
+        #last-outlook li div img {position: relative;top: 50%;transform: translate(0,-50%);}
+        #last-outlook h3 {margin-top:28px;}
+        #last-outlook  p {width: 120px;margin:auto;margin-top: 12px;}
+        #header  ul .li {
+            height: 100px;
+            float: left;
+            width: 110px;
+            text-align: center;
+        }
+        #header  ul .li a{
+            display: inline-block;
+            line-height: 100px;
+            font-size: 18px;
+        }
+      
+       
+    </style>
+    <link rel="stylesheet" href="../common.css">
+</head>
+<body>
+    <div id="header" class="container_fluid" style="background-image: url(../img2/banner.png);">
+        
+        <div id="mask">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                </div>
+                <ul class="header_nav">
+                    <li class="li li1"><a href="新媒体.html">首页</a></li>
+                    <li class="li "><a href="./电商服务.html">电商策划</a><span></span></li>
+                    <li class="li li3"><a href="./新媒体.html">新媒体</a><span></span></li>
+                    <li class="li"><a href="./视觉设计.html">视觉设计</a><span></span></li>
+                    <li class="li li5"><a href="">软件开发</a><span></span></li>
+                    <li class="li"><a href="./关于我们.html">关于我们</a></li>
+                </ul>
+            </div>                
+            
+
+        </div>
+        <div class="container_fluid">
+            <div>
+                <h1>软件定制开发&nbsp;<span></span>&nbsp;信息化解决方案</h1>
+                <p class="p">&nbsp;<span></span>&nbsp;咨询 . 开发 . 运营&nbsp;<span></span>&nbsp;</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="intro" >
+        <h2>不仅仅是一家技术公司 我们做的还有很多</h2>
+        <p>Technology company</p>
+        
+        <ul class="intro-flex-container">
+            <li class="li1 li">
+                <div class="intro-icon">
+                </div>
+                <div class="intro-text">
+                    <h3>企业产业转型</h3>
+                    <div>
+                        <p>
+                            随着信息化环时代的到来，帮助传统对现有业务实现转型和升级，提供信息化转型咨询、落地实施
+                        </p> 
+                    </div>
+
+                </div>
+
+            </li>
+            <li class="li2 li">
+                <div class="intro-icon">
+                </div>
+                <div class="intro-text">
+                    
+                    <h3>企业快速发展</h3>
+                    <div>
+                        <p class="p">
+                            随着市场环境的不断变化，企业需要
+        一套新的系统来满足业务的快速发
+        展，并针对产品和新商业应用场景进
+        行信息化升级、改造
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="li3 li">
+                <div class="intro-icon">
+                </div>
+                <div class="intro-text">
+                <h3>企业产品创新</h3>
+                <div>
+                    <p>
+                        传统外包或者现有产品无法满足实际业务需求，需要从产品商业模式进行讨论和分析，打造创新产品
+                    </p>                    
+                </div>
+                </div>
+
+            </li>
+            <li class="li4 li" >
+                <div class="intro-icon">
+                </div>
+                <div class="intro-text">
+                <h3>企业需求定制</h3>
+                <div>
+                    <p>
+                        充分沟通、了解客户需求。根据需求
+                        背后真正的诉求，从痛点出发，分解
+                        优化需求。打造符合企业业务需求且
+                        有价值的产品                         
+                    </p>                    
+                </div>
+                </div>
+
+            </li>
+        </ul>
+        
+
+    </div>
+    <div id="dev1" class="container_fluid">
+        <div class="container">
+            <h2>软件定制开发</h2>
+            <p>Software customization development</p>
+            <ul class="dev1-flex-container container">
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4597.png" alt="">
+                    </div>
+                    <div class="btm">
+                        <h3>软件定制开发</h3>
+                        <p>
+                            多年的软件开发经验，将线下流程与互联网相结合，为您开发一个符合企业业务流的软件系统
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4598.png" alt="">
+                    </div>
+                    <div class="btm">
+                        <h3>微信公众号开发</h3>
+                        <p>根据您的需求来规划微信公众号制作运营方案，在微信上实现高效的信息传播渠道，实现品牌的价值观输出、信息内容的有效传播、用户情感的高效沟通。
+                        </p>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4599.png" alt="">
+                    </div>
+                    <div class="btm"> 
+                        <h3>WEB定制开发</h3>
+                        <p>
+                            提供定制化网站搭建服务，根据业务需求，提供专业化的网站设计、网站研发、网站维护服务，帮助企业建立在现代互联网时代的高价值网站。
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4600.png" alt="">
+                    </div>
+                    <div class="btm">
+                        <h3>电商平台开发</h3>
+                        <p>多渠道信息互通，实现终端数据同步，达到全网营销的效果，并将后台管理统一在一个管理后台</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4601.png" alt="">
+                    </div>
+                    <div class="btm">
+                        <h3>APP定制开发</h3>
+                        <p>为客户量身打造个性化APP,1OS、 Adriod系统开发,满足移动APP多平台要求</p>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="dev2" class="container_fluid">
+        <div class="container">
+            <h2>软件定制开发的特点</h2>
+            <p>Characteristics of software customization development</p>
+            <ul class="dev1-flex-container container">
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4602.png" alt="">
+                    </div>
+                    <h3>针对性强</h3>
+                    <div class="btm">
+                        <p>
+                            针对企业不同情况，将管理者最
+                            新的管理思路和最科学、现代的
+                            管理模式融入到软件模型当中。
+                            从而提高了软件的实用价值，带
+                            给企业高价值回报                            
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4603.png" alt="">
+                    </div>
+                    <h3>操作便捷</h3>
+                    <div class="btm">
+                        <p>
+                            根据企业现有业务流程设计开发，逻辑清晰、操作便捷、易用性强
+                        </p>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4604.png" alt="">
+                    </div>
+                    <h3>性价比高</h3>
+                    <div class="btm"> 
+                        <p>
+                            定制软件根据企业情况，仅开发企业所需要的功能模块
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4605.png" alt="">
+                    </div>
+                    <h3>服务周到</h3>
+                    <div class="btm">
+                        <p>
+                            软件定制开发由专业的服务团队提供服务，任何时候系统出现故障，由专人进行踪服务，为您解除后顾之忧
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="logo">
+                        <img src="../img2/组 4606.png" alt="">
+                    </div>
+                    <h3>升级迭代方便</h3>
+                    <div class="btm">
+                        <p>根据企业不同时期的发展需求，定制软件可以满足企业的升级迭代要求，助理企业变革发展</p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div id="service" class="container">
+        <h2>服务流程</h2>
+        <p>Service process</p>
+    </div>
+    <ul id="service-content">
+        <li>
+            <div>
+                <div>1</div>
+                <h3>需求沟通</h3>
+            </div>
+            <p>
+                倾听客户真正需求，找到真正对
+客户有价值的解决方案
+            </p>
+        </li>
+        <li>
+            <div>
+                <div>2</div>
+                <h3>视觉创意</h3>
+            </div>
+            <p>色彩及平面元素设定，结构和布局规范确认</p>
+        </li>
+        <li>
+            <div>
+                <div>3</div>
+                <h3>前后台开发</h3>
+            </div>
+            <p>打造舒适交互界面，精准高效的强大功能设置</p>
+        </li>
+        <li>
+            <div>
+                <div>4</div>
+                <h3>系统测试</h3>
+            </div>
+            <p>不同机型、多分辨率、高密度实地测试调整</p>
+        </li>
+        <li>
+            <div>
+                <div>5</div>
+                <h3>维护和服务</h3>
+            </div>
+            <p>项目完成后，提供免费后台操作培训</p>
+        </li>
+    </ul>
+    <div id="last" class="container_fluid">
+        <div id="our" class="container">
+            <h2>我们的优势</h2>
+            <p>Our strengths</p>
+        </div>
+        <ul id="our-description" class="clear">
+            <li class="l"><img src="../img2/cooperation.png" alt=""></li>
+            <li class="l">
+                天津亿网通达专注于为传统型企业以及中小型提供定制化软件的咨询、
+    设计、开发、运营服务。公司拥有敬业、敏锐、高效、激情的软件开发
+    团队和大学生创业团队，通过互联网技术与行业结合，加速企业创新，
+    助力增长，优化运营，提高效率，升级客户体验助力企业创造更多的商
+    业价值
+            </li>
+        </ul>
+        <div id="feature" class="container_fluid">
+            <h2>眼高于顶放眼未来</h2>
+            <p>为您服务仅仅是我们的开始,竭尽全力成为您的左膀右臂</p>
+        </div>
+        <ul id="last-outlook">
+            <li>
+                <div><img src="../img2/01.png" alt=""></div>
+                <h3>定位重塑</h3>
+                <p>针对项目深层分析给予建议助其利益最大化</p>
+            </li>
+            <li>
+                <div><img src="../img2/02.png" alt=""></div>
+                <h3>钻石品质</h3>
+                <p>深层优化资源,极速响应U设计紧跟时代趋势</p>
+            </li>
+            <li>
+                <div><img src="../img2/03.png" alt=""></div>
+                <h3>服务不息</h3>
+                <p>24小时及时响应,为项目运行保驾护航</p>
+            </li>
+            <li>
+                <div><img src="../img2/04.png" alt=""></div>
+                <h3>售后无忧</h3>
+                <p>品质服务团队跟随项目维护确保您无后顾之忧</p>
+            </li>
+        </ul>
+    
+    </div>
+    <iframe src="./footer.html" frameborder="0" width="100%" height="285px" scrolling="no"></iframe>
+
+
+</body>
+</html>

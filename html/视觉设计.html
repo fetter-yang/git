@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,max-scale=2.0">
+    <title>视觉设计</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/mousePress.js"></script>
+    <script >
+        window.onload = function(){
+            mousePress();
+        }
+    </script>
+    <style>
+        
+        .flex-container {width: 1200px;margin: auto;display: flex;}
+        #header .container_fluid div{width: 1200px;text-align: left;margin: auto;position: relative;top: 190px;left: 145px;color: white;}
+        #header .container_fluid div h1 {font-size: 48px;transition: all 0.2s;transform-origin: left;width: 444px;}
+        #header .container_fluid div h3 {margin-top: 20px;}
+        #header .container_fluid div li:hover {animation: rotation .5s  linear;}
+        @keyframes rotation {
+            0%{transform: translate(0,0);}
+            25%{transform: translateY(-10px);color:violet;}
+            55%{transform:  translateY(10px);border:1px solid violet;}
+            75%{ border:1px solid cyan;}
+            100%{transform:translate(0,0)}
+        }
+       
+        #header .container_fluid div h3 {font-size: 24px;}
+        #header .container_fluid div ul {margin-top: 60px;margin-left: -18px;}
+        #header .container_fluid div ul li {font-size: 18px;line-height: 50px;opacity: 0.65;color: #FFFFFF;width: 140px;height: 50px;border: 1px solid #FFFFFF;display: inline-block;text-align: center;}
+        #header .container_fluid div ul li:nth-of-type(2){margin-left: 25px;}
+        #header .container_fluid div ul li:nth-of-type(3){margin-left: 25px;}
+
+        #section1 {width: 1208px;margin: auto;position: relative;}
+        .section1-left {width: 504px;margin-left: 140px;color: #333333;}
+        .section1-left h1 {color: #033333;font-size:80px;margin-top: 121px;}
+        .section1-left h1:hover{animation: slide .4s linear;transform-origin: center;}
+        @keyframes slide {
+            0%{transform: translate(0,0);}
+            25%{transform: translate(20px,0);color:violet;text-shadow: 0 0 10px aqua;}
+            29%{transform:translate(20px,0);}
+            75%{transform-origin: top; transform: rotate(-5deg);color:cyan;}
+            76%{transform-origin: left; transform: rotate(5deg);}
+            100%{transform:translate(0,0)}
+        }
+        
+        .section1-left h3 {font-size: 30px;margin-top: 29px;}
+        .section1-left h2 {font:normal 30px 宋体;margin-top: 58px;}
+        .section1-left p {color: #888888;margin-top: 31px;}
+        .section1-left p:last-of-type {margin-top: 22px;}
+        .section1-right {position: absolute;top: 110px;width: 532px;height: 342px;background-color: #FFA769;right: -40px;}
+        .section1-right img {position: absolute;top: 20px;right: 20px;width: 532px;height: 342px;}
+        #pic .flex-container {width: 1200px;margin: auto;margin-top: 84px;  display: flex;justify-content: space-around;}
+        #pic .flex-container.ul2 {margin-top: 50px;}
+        #pic .flex-container li {width: 99px;text-align: center;}
+
+
+        #section2 {width:100% ; background:url(../img2/组10.png) no-repeat;height: 342px;margin-top: 61px;background-size: 100% 100%;}
+        #section2 .flex-container { justify-content: space-between;}
+        #section2 .flex-container .left{width: 362px;height: 227px; position: relative;margin-top: 60px;}
+        #section2 .flex-container .left .left-text {position: absolute;top: 44px;left: 36px;}
+        #section2 .flex-container .left .left-text h2 {color: #F4F5F7;font-size: 24px;}
+        #section2 .flex-container .left .left-text p:first-of-type {color: #F4F5F7;font-size:16px;;opacity: 0.5;margin-top: 18px;}
+        #section2 .flex-container .left .left-text div {width: 48px;border-top: 4px solid white;margin-top: 17px;}
+        #section2 .flex-container .left .left-text h3 {color: #F4F5F7;margin-top: 25px;font-size: 16px;}
+
+        #section2 .flex-container ul {width: 632px;margin-top: 87px;}
+        #section2 .flex-container ul li {position: relative;color: #F4F5F7;line-height: 36px;font-size: 16px;opacity: 0.8;}
+        #section2 .flex-container ul li::before {content: "";display: block;position: absolute;width: 7px;height: 7px;background-color: white;transform:rotate(45deg);left: -25px;top: 14px;}
+       
+        .main-sec1 {color: #999999;width: 1200px;position: relative;height: 359px;}
+        .main-sec1 .sec1-left {margin-top: 77px;width: 364px;height:200px;border: 2px solid #F4F5F7;}
+        .main-sec1 .sec1-left div {margin-left: 32px;margin-top: 26px;}
+        .main-sec1 .sec1-left h3 {font-size: #999999;font-size: 16px;margin-top: 12px;}
+        .main-sec1 .sec1-left p:first-of-type{font-size: 18px;margin-top: 35px;line-height: 16px;margin-bottom: 14px;}
+        .main-sec1 .sec1-r {width:783px;margin-left: 51px;margin-top: 77px;}
+        .main-sec1 .sec1-r p:last-of-type{margin-top: 20px;line-height: 24px;}
+
+        .sec1-aside{position: absolute;bottom: 0;right: 0;}
+        .sec1-aside div {width: 103px;height: 34px;border: 1px transparent solid; border-radius: 30px;text-align: center;line-height: 34px;display: inline-block;margin-left: 50px;margin-bottom: 19px;}
+        .sec1-aside div:first-of-type {background-color:#F4F5F7;}
+        .sec1-aside div:last-of-type {background-color:#FF6A00;}
+
+
+        .main-sec2 {margin-top: 110px;background-color: #F4F5F7;height: 271px;}
+        .main-sec2 img {position: relative;top: -30px;}
+        .main-sec2 .sec2-r {margin-left: 58px;}
+        .main-sec2 .sec2-r h2 {font-size: 24px;margin-top: 30px;width: 317px}
+        .main-sec2 .sec2-r ul {margin-top: 30px;}
+        .main-sec2 .sec2-r ul li {padding-left: 30px;position: relative;}
+        .main-sec2 .sec2-r ul li::before {content: "";display: block;position: absolute;width: 7px;height: 7px;background-color: #FF6A00;transform: rotate(-45deg);left: 0;top: 8px;}
+        .main-sec3{width: 1200px;text-align: center;margin: auto;}
+        .main-sec3 .sec3-title {margin-top: 89px;}
+        .main-sec3 div p {margin-top: 17px;color: #999999;}
+        .main-sec3 .flex-container{justify-content: space-between;margin-top: 39px;}
+        .main-sec3 .flex-container li img {width: 285px;height: 220px;}
+        .main-sec3 .flex-container li div {width: 285px;height: 120px;text-align:left;}
+        .div1 {background-color: #FF6A00;color: white;}
+        .main-sec3 .flex-container  .div1 h3, .main-sec3 .flex-container  .div1 h3+p {color: white;opacity: 0.7;}
+        .main-sec3 .flex-container li h3 {color: #333333;font-size: 16px;position: relative;top: 20px;}
+        .main-sec3 .flex-container li p {width: 238px;margin-top: 24px;line-height: 24px;}
+        .main-sec3 .flex-container .text-l{margin-left: 22px;}
+        .title {margin-top:  79px;}
+        .title p {margin-top:17px ;}
+
+        .main-sec4 {text-align: center;}
+        .main-sec4 .sec4-img {margin-top: 48px;justify-content: space-between;}
+        .main-sec4 .sec4-img .img-des {width: 380px;height: 80px;color: white;background-color:  #F4F4F4;color: #333333;}
+        .main-sec4 .sec4-img div:first-of-type .img-des {background-color: #FF6A00;color: white;}
+       
+        .main-sec4 .sec4-img div:first-of-type .img-des p {opacity: 0.9;}
+        .main-sec4 .sec4-img .img-des h3 {position: relative;top: 20px;}
+        .main-sec4 .sec4-img .img-des p {position: relative; top: 32px;color: #999999;}
+
+        .main-sec5 {width: 1200px;height: 174px; margin: auto;background:url(../img2/组23.png) no-repeat;color: #F4F5F7;margin-top: 80px;}
+        .main-sec5 li:first-of-type {flex:1;margin-left: 49px;margin-top: 40px;}
+        .main-sec5 li:first-of-type div {width: 43px;height: 2px;background: #F4F5F7;margin-bottom: 22px;}
+        .main-sec5 li:last-of-type {margin-top: 84px;text-transform: uppercase;font-size: 14px;opacity: 0.6;line-height: 24px;margin-right: 31px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+        .main-sec6 {margin-top: 89px;background-color: #F4F5F7;height: 271px;justify-content:space-between;}
+        .main-sec6 li {margin-top: 55px;}
+        .main-sec6 li h2 {font-size: 24px;margin-bottom: 31px;}
+        .main-sec6 li p {padding-left: 20px;margin: 10px 0; color: #333333;position: relative;}
+        .main-sec6 li p::before{content: "";display: block;position: absolute;width: 7px;height: 7px;background-image: linear-gradient(20deg, violet 25%,aqua 50%,blue 75%,white 100%);transform: rotate(45deg);top: 6px;left: 5px;}
+        .main-sec6 li:last-of-type {margin-top: -29px;}
+
+        .main-sec7 {text-align: center;}
+        .main-sec7 .flex-container {margin-top: 52px;justify-content: space-between;position: relative;}
+        .main-sec7 .line {width: 1010px;border-top: 2px solid #F3F2F0;margin: auto;position: absolute;left: 110px;top: 34px;z-index: -5;}
+        .main-sec7 .img-a {position: relative;}
+
+        .main-sec7 .a1::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 47px;top: 7px;}
+        .main-sec7 .a2::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 40px;top: 6px;}
+        .main-sec7 .a3::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 35px;top: 5px;}
+        .main-sec7 .a4::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 42px;top: 5px;}
+        .main-sec7 .a5::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 42px;top: 6px;}
+        .main-sec7 .a6::before {content: "";display:block;position: absolute;width: 49px;height: 49px;border: 5px solid cyan;border-radius: 120px;left: 16px;top: 5px;text-shadow: 0 0 10px aqua;}
+
+        .main-sec7 .img-a::before {display: none;background-image: linear-gradient(90deg,cyan 0%,blue 15%,blue 85%,cyan 100%);opacity: 0.45;}
+        .main-sec7 .img-a:active::before {display: block;}
+
+
+        .main-sec7 .img-a+h3 {color: #333333;margin-top: 28px;}
+        .main-sec7 .img-a~p{margin-top:21px;line-height:24px ;color: #666666;}
+
+    </style>
+</head>
+<body>
+    <div id="header" class="container_fluid" style="background-image: url(../img2/bg4.png)">
+        <div id="mask">  
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                </div>
+                <ul class="header_nav">
+                    <li class="li li1"><a href="./新媒体.html">首页</a></li>
+                    <li class="li li2"><a href="./电商服务.html">电商策划</a><span></span></li>
+                    <li class="li li3"><a href="./新媒体.html">新媒体</a><span></span></li>
+                    
+                    <li class="li li4"><a href="">视觉设计</a><span></span></li>
+                    <li class="li"><a href="软件设计.html">软件开发</a><span></span></li>
+                    <li class="li li6"><a href="./关于我们.html">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="head-img" class="container_fluid">
+            <div class="container">
+                <h1>
+                    想你所想为你设计
+                </h1>
+                <h3>我们做的不只是电商设计更是为您塑造品牌！</h3>
+                <ul class="description">
+                    <li>产品拍摄</li>
+                    <li>详情设计</li>
+                    <li>店铺装修</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   <section id="section1" class="clear" >
+    <div class="section1-left l">
+        <h1>Ewebtd</h1>
+        <h3>Visual design</h3>
+        <h2>私人定制</h2>
+        <p>
+            原创是店铺脱颖而出的必要装备，追求为原创而生
+        </p>
+        <p>
+            懂运营的设计团队会将运营思维灌输美工设计，网店装修，首页，详情设计移动端
+设计等视觉专属定制！
+        </p>
+    </div>
+    <div class="section1-right  l">
+        <img src="../img2/shijue.png" alt="00">
+        
+    </div>
+   </section>
+   <div id="pic">
+    <ul class="flex-container">
+        <img src="../img2/组11.png" alt="">
+        <img src="../img2/组12.png" alt="">
+        <img src="../img2/组13.png" alt="">
+    </ul>
+    <ul class="flex-container ul2">
+        <li>降低跳失率</li>
+        <li>打造爆款</li>
+        <li>提升品牌形象</li>
+    </ul>
+   </div>
+   <section id="section2" class="container_fluid">
+       <div class="flex-container">
+           <div class="left">
+               <img src="../img2/sss.png" alt="">
+               <div class="left-text">
+                    <h2>提升产品点击率</h2>
+                    <p>Increase Product Click through rate</p>
+                    <div></div>
+                    <h3>保持视觉“洁癖”，颜值是关键</h3>
+               </div>
+
+           </div>
+           <ul>
+               <li>
+                   
+                   虽然定制设计很麻烦，但也更容易做出特色，充分根据商品的风格定位精心策划从视觉到
+                   引导，每一个细节都在关注客户进店只需完整浏览页面，就能解决所有后顾之忧，让客服
+                   不再为解释而绞尽脑汁
+                                               
+               </li>
+               <li>
+                   有针对性地突出商品卖点和消费者利益点
+                   <br>
+                   是把握好吸引消费者眼球，长时间驻足的关键！                          
+               </li>
+           </ul>
+       </div>
+   </section>
+   <main>
+        <section class="main-sec1 flex-container">
+            <div class="sec1-left">
+                <div>
+                    
+                    <h2>研究表明</h2>
+                    <h3>营销型装修 > 一般店铺装修</h3>
+                    <p>RESEARCH SHOWS</p>
+                    <p>MARKETING DECORATION GENERAL <br> SHOP DECORATION
+                                </p>
+                </div>
+            </div>
+            <div class="sec1-r">
+                <p>
+                    因此在进行店铺装修时我们非常注重营销和视觉体验点的结合，只有这样才能引起消费者的购买欲，从而促成转化率。
+                </p>
+                <p>
+                    甚至在首页设计框架的过程中，为了提升消费者的浏览时间，我们把卖场的环形原理也运用中，也是希望整个页面可以引导消费者走完才离开，只有这样，才能达到营销和视觉的契合点，拒绝使用千篇一律的模板，创建自己的品牌特性！
+                </p>
+            </div>
+            <aside class="sec1-aside clear">
+                <div >79%</div>
+                <div >21%</div>
+                <p>79%的顾客不会购买没有详细描述文字和图片的宝贝</p>
+            </aside>
+        </section>
+
+        <section class="main-sec2 flex-container">
+                <div><img src="../img2/组15.png" alt=""></div>
+                <div class="sec2-r">
+                    <h2>因此，在详情页模块的沟通上，我们力求做到</h2>                        
+                    <ul>
+                        <li>让每一个模块设计都旨在向消费者尽可能多地传递商品信息</li>
+                        <li>延伸店铺的品牌形象</li>
+                        <li>在风格和细节的设计上可以更好地凸显商品的与众不同</li>
+                        <li>让消费者可以深刻探寻到详情页背后的故事！</li>
+                    </ul>
+                </div>
+        </section>
+        
+        <section class="main-sec3 ">
+                <div class="sec3-title">
+                    <h2>设计服务领域</h2>
+                    <p>Design Services</p>
+                </div>
+                <div class="flex-container">
+                    <li>
+                        <img src="../img2/sj01.png" alt="">
+                        <div class="div1">
+                            <div class="text-l">
+                                <h3>宣传品设计</h3>
+                                <p>
+                                    为各种行业提供系统专业的品牌形象整
+                                    体解决方案，通过设计将品牌策略转化
+                                    为独特的视觉符号...
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="../img2/sj02.png" alt="">
+                        <div>
+                            <div class="text-l">
+                                <h3>包装设计</h3>
+                                <p>
+                                    按照客户的品牌内涵，制作符合品牌精
+                                    神的包装盒设计、包装袋设计、手提袋
+                                    设计方案。
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="../img2/sj03.png" alt="">
+                        <div>
+                            <div class="text-l">
+                                <h3>电商设计</h3>
+                                <p>
+                                    专注于电商视觉难题，可提供详情页设计、主图设计、整店装修、产品拍摄与
+                                    修图、主图视频、活动banne图等服务
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="../img2/sj04.png" alt="">
+                        <div>
+                            <div class="text-l">
+                                <h3>网站设计</h3>
+                                <p>
+                                    根据品牌特点，提供有针对性的电商页面、移动页面、专题页面设计解决方案。
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </div>
+        </section>
+        <section class="main-sec4 ">
+            <div class="title">
+                <h2>设计案例</h2>
+                <p>Design Services</p>
+            </div>
+            <div class="flex-container sec4-img">
+                <div >
+                    <img src="../img2/sj001.png" alt="">
+                    <div class="img-des">
+                        <h3>艺术品详情页设计</h3>
+                        <p>精品设计</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="../img2/组21.png" alt="">
+                    <div class="img-des">
+                        <h3>艺术品详情页设计</h3>
+                        <p>精品设计</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="../img2/组22.png" alt="">
+                    <div class="img-des">
+                        <h3>艺术品详情页设计</h3>
+                        <p>精品设计</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ul class="main-sec5 flex-container">
+            <li>
+                <div></div>
+                <h3>营销型设计提升效果</h3>
+                <h3>别再犹豫！</h3>
+                <h3>选择火蝠电商，为您排忧解难</h3>
+            </li>
+            <li>
+                <h3>Marketing Design to improve the effectiveness</h3>
+                <h3>of no longer hesitate! CHOOSE FIRE-BAT E-COMMERCE, </h3>
+                <h3>for you to solve the problem</h3>
+            </li>
+        </ul>
+        <ul class="main-sec6 flex-container">
+            <li>
+                <h2>策划交给我、设计交给我、店铺装修交给我</h2>
+                <p>一站式帮您解决所有视觉营销问题</p>
+                <p>同时提供运营推广咨询</p>
+                <p>给您出谋划策，任何店铺问题可直接加运营咨询。</p>
+            </li>
+            <li>
+                <img src="../img2/组24.png" alt="">
+            </li>
+        </ul>
+
+        <section class="main-sec7">
+            <div class="title">
+                <h2>设计流程</h2>
+                <p>Design Services</p>
+            </div>
+            <ul class="flex-container">
+                <div class="line"></div>
+                <li>
+                    <div class="img-a a1">
+                        <img src="../img2/组25.png" alt="">
+                    </div>
+                    <h3>1.售前沟通</h3>
+                    <p>
+                        店铺定位，消费者需求，<br>明确装修要求填写反馈表
+                    </p>
+                </li>
+
+                <li>
+                    <div class="img-a a2">                    
+                        <img src="../img2/组26.png" alt="">
+                    </div>
+                    <h3>2.沟通基本思路</h3>
+                    <p>针对店铺主色调及风格<br>
+                        给出一个初步的思路
+                    </p>
+                </li>
+
+                <li>
+                    <div class="img-a a3">                      
+                        <img src="../img2/组27.png" alt="">
+                    </div>
+                    <h3>3.素材准备阶段</h3>
+                    <p>根据素材着手设计</p>
+                </li>
+
+                <li>
+                    <div class="img-a a4">
+                        <img src="../img2/组28.png" alt="">
+                    </div>
+                    <h3>4.店铺装修阶段</h3>
+                    <p>主色调及风格定位,<br> 营销型关键词表达制作
+                    </p>
+                </li>
+
+                <li>
+                    <div class="img-a a5">
+                        <img src="../img2/组29.png" alt="">
+                    </div>
+                    <h3>5.沟通改动</h3>
+                    <p>沟通、调整、敲定页面</p>
+                </li>
+
+                <li>
+                    <div class="img-a a6">
+                        <img src="../img2/组30.png" alt="">
+                    </div>
+                    <h3>6.确认完成</h3>
+                    <p>合作愉快</p>
+                </li>
+            </ul>
+        </section>
+        <iframe src="./footer.html" frameborder="0" width="100%" height="274px" scrolling="no" ></iframe>
+
+   </main>
+</body>
+</html>
+
+
+
+
+                            
+
+
+
+
+                           
+
+                            
